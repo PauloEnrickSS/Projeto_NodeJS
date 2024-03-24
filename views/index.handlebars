@@ -1,0 +1,18 @@
+<ul>
+     <li><a href="/">Cadastrar </a></li>
+    <li><a href="/consultar">Consultar </a></li>
+</ul>
+    <form action="/cadastrar" method="POST">
+        <input id="nome" name="nome" class="input" type="name" placeholder="Nome">
+        <input id="telefone" name="telefone" class="input" type="text" placeholder="Telefone">
+        <select name="origem" class="input">
+            <option value="" disabled selected>Origem</option>
+            <option value="Celular">Celular</option>
+            <option value="Whatsapp">Whatsapp</option>
+            <option value="Telefone_fixo">Telefone fixo</option>
+        </select>
+        <input id="data_contato" name="data_contato" class="input" type="date" placeholder="Data de contato">
+        <input id="observacao" name="observacao" class="input" type="text" placeholder="Observação">
+        <button type="submit" class="submit">Cadastrar</button>
+    </form>
+

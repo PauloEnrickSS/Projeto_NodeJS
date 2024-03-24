@@ -1,0 +1,34 @@
+<ul>
+    <li><a href="/">Cadastrar </a></li>
+    <li><a href="/consultar">Consultar </a></li>
+</ul>
+<form action="/consultar" method="GET">
+    <table>
+        <tr>
+            <th scope="col">ID</th>
+            <th scope="col">Nome</th>
+            <th scope="col">Telefone</th>
+            <th scope="col">Origem</th>
+            <th scope="col">Data de Contato</th>
+            <th scope="col">Observação</th>
+            <th scope="col">Ações</th>
+        </tr>
+
+        {{#each agendamentos}}
+        <tr>
+            <td>{{this.id}}</td>
+            <td>{{this.nome}}</td>
+            <td>{{this.telefone}}</td>
+            <td>{{this.origem}}</td> 
+            <td>{{this.data_contato}}</td>
+            <td>{{this.observacao}}</td>
+            <td>
+                <a href="/atualizar/{{this.id}}">Atualizar</a><br>
+                <form action="/consultar/excluir/{{this.id}}" method="POST">
+                    <button type="submit" class="delete">Excluir</button>
+                </form>
+            </td>
+        </tr>
+        {{/each}}
+    </table>
+</form>
